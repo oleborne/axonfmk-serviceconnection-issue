@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.greaterThan;
 
 @Testcontainers
 @SpringBootTest
-@ActiveProfiles("axon")
+@ActiveProfiles("axon") // this profile overrides the AxonServer hostname but @ServiceConnection should have precendence
 class ServiceConnectionFailingTests {
 	@Autowired
 	private AxonServerConnectionManager axonServerConnectionManager;
